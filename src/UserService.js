@@ -55,7 +55,7 @@ function getUsersArticles(userId, pageNumber, func) {
 
 function getNews(id, pageNumber, func) {
     let accessToken = localStorage.getItem('token');
-    fetch(`https://localhost:44340/api/user/news/${id}/${pageNumber}`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/user/news/${id}/${pageNumber}`, {
         method: 'GET',
         headers: {
             'Authorization': 'bearer ' + accessToken
@@ -73,7 +73,7 @@ function getNews(id, pageNumber, func) {
 
 function getSubscribers(id, pageNumber, func) {
     let accessToken = localStorage.getItem('token');
-    fetch(`https://localhost:44340/api/user/subs/${id}/${pageNumber}`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/user/subs/${id}/${pageNumber}`, {
         method: 'GET',
         headers: {
             'Authorization': 'bearer ' + accessToken
@@ -89,7 +89,7 @@ function getSubscribers(id, pageNumber, func) {
 
 function getPublishers(id, pageNumber, func) {
     let accessToken = localStorage.getItem('token');
-    fetch(`https://localhost:44340/api/user/publishers/${id}/${pageNumber}`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/user/publishers/${id}/${pageNumber}`, {
         method: 'GET',
         headers: {
             'Authorization': 'bearer ' + accessToken
@@ -107,7 +107,7 @@ function getPublishers(id, pageNumber, func) {
 function putUser(user, func){
     let accessToken = localStorage.getItem('token')
    
-    fetch(`https://localhost:44340/api/user`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/user`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
