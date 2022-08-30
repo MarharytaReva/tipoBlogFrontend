@@ -3,7 +3,7 @@ function authorize(login, password, func){
         login: login,
         password: password
     }
-    fetch(`https://localhost:44340/api/account/token`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/account/token`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -30,7 +30,7 @@ function authorize(login, password, func){
 }
 
 function registrate(user, func){
-    fetch(`https://localhost:44340/api/account/registrate`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/account/registrate`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

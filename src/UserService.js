@@ -2,7 +2,7 @@
 
 function search(name, func) {
     let accessToken = localStorage.getItem('token');
-    fetch(`https://localhost:44340/api/user/search/${name}`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/user/search/${name}`, {
         method: 'GET',
         headers: {
             'Authorization': 'bearer ' + accessToken
@@ -18,7 +18,7 @@ function search(name, func) {
 
 function getUser(id, func) {
     let accessToken = localStorage.getItem('token');
-    fetch(`https://localhost:44340/api/user/${id}`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/user/${id}`, {
         method: 'GET',
         headers: {
             'Authorization': 'bearer ' + accessToken
@@ -32,7 +32,7 @@ function getUser(id, func) {
 
 function getUsersArticles(userId, pageNumber, func) {
     let accessToken = localStorage.getItem('token');
-    fetch(`https://localhost:44340/api/user/articles/${userId}/${pageNumber}`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/user/articles/${userId}/${pageNumber}`, {
         method: 'GET',
         headers: {
             'Authorization': 'bearer ' + accessToken,

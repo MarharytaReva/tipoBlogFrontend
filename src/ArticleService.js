@@ -1,7 +1,7 @@
 function postArticle(article, func){
     let accessToken = localStorage.getItem('token')
    
-    fetch(`https://localhost:44340/api/article`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/article`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -23,7 +23,7 @@ function postArticle(article, func){
 function deleteArticle(id){
     let accessToken = localStorage.getItem('token')
    
-    fetch(`https://localhost:44340/api/article/${id}`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/article/${id}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'bearer ' + accessToken
@@ -40,7 +40,7 @@ function deleteArticle(id){
 function putArticle(article, func){
     let accessToken = localStorage.getItem('token')
    
-    fetch(`https://localhost:44340/api/article`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/article`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
@@ -62,7 +62,7 @@ function putArticle(article, func){
 
 function getArticle(id, func) {
     let accessToken = localStorage.getItem('token');
-    fetch(`https://localhost:44340/api/article/${id}`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/article/${id}`, {
         method: 'GET',
         headers: {
             'Authorization': 'bearer ' + accessToken,

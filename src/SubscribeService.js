@@ -1,7 +1,7 @@
 function subscribe(subscribeObj){
     let accessToken = localStorage.getItem('token')
    
-    fetch(`https://localhost:44340/api/subscribe`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/subscribe`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -21,7 +21,7 @@ function subscribe(subscribeObj){
 function unsubscribe(subId, publisherId){
     let accessToken = localStorage.getItem('token')
    
-    fetch(`https://localhost:44340/api/subscribe/${subId}/${publisherId}`, {
+    fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/subscribe/${subId}/${publisherId}`, {
         method: 'DELETE',
         headers: {
             'Authorization': 'bearer ' + accessToken
@@ -38,7 +38,7 @@ function unsubscribe(subId, publisherId){
 function getSubscripton(subId, publisherId, func) {
     try{
         let accessToken = localStorage.getItem('token');
-        fetch(`https://localhost:44340/api/subscribe/${subId}/${publisherId}`, {
+        fetch(`https://tipoblogapi20220829193214.azurewebsites.net/api/subscribe/${subId}/${publisherId}`, {
             method: 'GET',
             headers: {
                 'Authorization': 'bearer ' + accessToken
